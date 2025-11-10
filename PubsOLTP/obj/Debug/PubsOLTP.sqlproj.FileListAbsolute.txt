@@ -1,0 +1,16 @@
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\PubsOLTP\obj\Debug\PubsOLTP.sqlproj.AssemblyReference.cache
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\PubsOLTP\obj\Debug\PubsOLTP.dll
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\PubsOLTP\obj\Debug\PubsOLTP.pdb
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\PubsOLTP\bin\Debug\PubsOLTP.dacpac
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\PubsOLTP\obj\Debug\Model.xml
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\PubsOLTP\obj\Debug\refactor.xml
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\PubsOLTP\obj\Debug\postdeploy.sql
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\PubsOLTP\obj\Debug\predeploy.sql
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\PubsOLTP\bin\Debug\PubsOLTP.dll
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\PubsOLTP\bin\Debug\PubsOLTP.pdb
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsOLTP\bin\Debug\PubsOLTP.dacpac
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsOLTP\bin\Debug\PubsOLTP.dll
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsOLTP\bin\Debug\PubsOLTP.pdb
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsOLTP\obj\Debug\PubsOLTP.sqlproj.AssemblyReference.cache
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsOLTP\obj\Debug\PubsOLTP.dll
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsOLTP\obj\Debug\PubsOLTP.pdb
