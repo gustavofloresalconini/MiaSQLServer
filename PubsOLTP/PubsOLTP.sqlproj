@@ -61,6 +61,7 @@
     <Folder Include="Schema\Security" />
     <Folder Include="Schema\Tables" />
     <Folder Include="Schema\Scripts" />
+    <Folder Include="Snapshots" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schema\Tables\dbo.authors.Table.sql" />
@@ -76,19 +77,20 @@
     <Build Include="Schema\Tables\dbo.titles.Table.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Schema\Security\dbo.authors.Data.sql" />
-    <None Include="Schema\Security\dbo.discounts.Data.sql" />
-    <None Include="Schema\Security\dbo.employee.Data.sql" />
-    <None Include="Schema\Security\dbo.jobs.Data.sql" />
-    <None Include="Schema\Security\dbo.pub_info.Data.sql" />
-    <None Include="Schema\Security\dbo.publishers.Data.sql" />
-    <None Include="Schema\Security\dbo.roysched.Data.sql" />
-    <None Include="Schema\Security\dbo.sales.Data.sql" />
-    <None Include="Schema\Security\dbo.stores.Data.sql" />
-    <None Include="Schema\Security\dbo.titleauthor.Data.sql" />
-    <None Include="Schema\Security\dbo.titles.Data.sql" />
+    <None Include="Schema\Scripts\dbo.authors.Data.sql" />
+    <None Include="Schema\Scripts\dbo.discounts.Data.sql" />
+    <None Include="Schema\Scripts\dbo.employee.Data.sql" />
+    <None Include="Schema\Scripts\dbo.jobs.Data.sql" />
+    <None Include="Schema\Scripts\dbo.pub_info.Data.sql" />
+    <None Include="Schema\Scripts\dbo.publishers.Data.sql" />
+    <None Include="Schema\Scripts\dbo.roysched.Data.sql" />
+    <None Include="Schema\Scripts\dbo.sales.Data.sql" />
+    <None Include="Schema\Scripts\dbo.stores.Data.sql" />
+    <None Include="Schema\Scripts\dbo.titleauthor.Data.sql" />
+    <None Include="Schema\Scripts\dbo.titles.Data.sql" />
+    <None Include="Snapshots\PubsOLTP_20251117_21-23-48.dacpac" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="Schema\Security\Script.PostDeployment.sql" />
+    <PostDeploy Include="Schema\Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>
