@@ -1,0 +1,10 @@
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsDW\bin\Debug\PubsDW.dacpac
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsDW\bin\Debug\PubsDW.dll
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsDW\bin\Debug\PubsDW.pdb
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsDW\obj\Debug\PubsDW.sqlproj.AssemblyReference.cache
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsDW\obj\Debug\Model.xml
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsDW\obj\Debug\refactor.xml
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsDW\obj\Debug\postdeploy.sql
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsDW\obj\Debug\predeploy.sql
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsDW\obj\Debug\PubsDW.dll
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsDW\obj\Debug\PubsDW.pdb
