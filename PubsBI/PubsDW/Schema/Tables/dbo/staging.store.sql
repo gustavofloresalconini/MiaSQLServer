@@ -1,0 +1,13 @@
+CREATE TABLE [dbo].[staging.store](
+	[StoreSK] [int] NOT NULL,
+	[stor_name] [varchar](40) NULL,
+	[city] [varchar](20) NULL,
+	[state] [char](2) NULL,
+	[zip] [char](5) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[StoreSK] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
