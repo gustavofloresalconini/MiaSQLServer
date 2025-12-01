@@ -11,8 +11,8 @@
   DTS:LocaleID="16394"
   DTS:ObjectName="DimPublisher"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{346F5D58-6C58-439F-BB8A-611BA61A13A8}">
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{0EDBA2A1-3AE9-4DF9-A2E2-F6C387FE3AA2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -343,11 +343,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load Publishers\Load New Store"
+              refId="Package\Load Publishers\Load New Publisher"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="Load New Store"
+              name="Load New Publisher"
               usesDispositions="true"
               version="4">
               <properties>
@@ -400,7 +400,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load Publishers\Load New Store.Connections[OleDbConnection]"
+                  refId="Package\Load Publishers\Load New Publisher.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Destination.PubsDW]"
                   connectionManagerRefId="Package.ConnectionManagers[Destination.PubsDW]"
                   description="The OLE DB runtime connection used to access the database."
@@ -408,85 +408,85 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input]"
+                  refId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input].Columns[city]"
+                      refId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input].Columns[city]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="20"
                       cachedName="city"
-                      externalMetadataColumnId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      externalMetadataColumnId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input].ExternalColumns[city]"
                       lineageId="Package\Load Publishers\Get Publishers.Outputs[OLE DB Source Output].Columns[city]" />
                     <inputColumn
-                      refId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input].Columns[state]"
+                      refId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input].Columns[state]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="2"
                       cachedName="state"
-                      externalMetadataColumnId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      externalMetadataColumnId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input].ExternalColumns[state]"
                       lineageId="Package\Load Publishers\Get Publishers.Outputs[OLE DB Source Output].Columns[state]" />
                     <inputColumn
-                      refId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input].Columns[pub_id]"
+                      refId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input].Columns[pub_id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4"
                       cachedName="pub_id"
-                      externalMetadataColumnId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input].ExternalColumns[pub_id]"
+                      externalMetadataColumnId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input].ExternalColumns[pub_id]"
                       lineageId="Package\Load Publishers\Get Publishers.Outputs[OLE DB Source Output].Columns[pub_id]" />
                     <inputColumn
-                      refId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input].Columns[pub_name]"
+                      refId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input].Columns[pub_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="40"
                       cachedName="pub_name"
-                      externalMetadataColumnId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input].ExternalColumns[pub_name]"
+                      externalMetadataColumnId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input].ExternalColumns[pub_name]"
                       lineageId="Package\Load Publishers\Get Publishers.Outputs[OLE DB Source Output].Columns[pub_name]" />
                     <inputColumn
-                      refId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input].Columns[country]"
+                      refId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input].Columns[country]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="country"
-                      externalMetadataColumnId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      externalMetadataColumnId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input].ExternalColumns[country]"
                       lineageId="Package\Load Publishers\Get Publishers.Outputs[OLE DB Source Output].Columns[country]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      refId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input].ExternalColumns[city]"
                       codePage="1252"
                       dataType="str"
                       length="20"
                       name="city" />
                     <externalMetadataColumn
-                      refId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      refId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input].ExternalColumns[state]"
                       codePage="1252"
                       dataType="str"
                       length="2"
                       name="state" />
                     <externalMetadataColumn
-                      refId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input].ExternalColumns[PublisherSK]"
+                      refId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input].ExternalColumns[PublisherSK]"
                       dataType="i4"
                       name="PublisherSK" />
                     <externalMetadataColumn
-                      refId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input].ExternalColumns[pub_id]"
+                      refId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input].ExternalColumns[pub_id]"
                       codePage="1252"
                       dataType="str"
                       length="4"
                       name="pub_id" />
                     <externalMetadataColumn
-                      refId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input].ExternalColumns[pub_name]"
+                      refId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input].ExternalColumns[pub_name]"
                       codePage="1252"
                       dataType="str"
                       length="40"
                       name="pub_name" />
                     <externalMetadataColumn
-                      refId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      refId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input].ExternalColumns[country]"
                       codePage="1252"
                       dataType="str"
                       length="30"
@@ -496,22 +496,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load Publishers\Load New Store.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Load Publishers\Load New Publisher.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Publishers\Load New Store.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Load Publishers\Load New Publisher.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load Publishers\Load New Store.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load Publishers\Load New Publisher.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load Publishers\Load New Store.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load Publishers\Load New Publisher.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load Publishers\Load New Store.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load Publishers\Load New Publisher.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -679,11 +679,11 @@ where [refTable].[pub_id] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Load Publishers\Update Existing Store"
+              refId="Package\Load Publishers\Update Existing Publisher"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="Update Existing Store"
+              name="Update Existing Publisher"
               usesDispositions="true"
               version="4">
               <properties>
@@ -736,7 +736,7 @@ where [refTable].[pub_id] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load Publishers\Update Existing Store.Connections[OleDbConnection]"
+                  refId="Package\Load Publishers\Update Existing Publisher.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Destination.PubsDW]"
                   connectionManagerRefId="Package.ConnectionManagers[Destination.PubsDW]"
                   description="The OLE DB runtime connection used to access the database."
@@ -744,77 +744,77 @@ where [refTable].[pub_id] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input]"
+                  refId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input].Columns[city]"
+                      refId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input].Columns[city]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="20"
                       cachedName="city"
-                      externalMetadataColumnId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      externalMetadataColumnId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input].ExternalColumns[city]"
                       lineageId="Package\Load Publishers\Get Publishers.Outputs[OLE DB Source Output].Columns[city]" />
                     <inputColumn
-                      refId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input].Columns[state]"
+                      refId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input].Columns[state]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="2"
                       cachedName="state"
-                      externalMetadataColumnId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      externalMetadataColumnId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input].ExternalColumns[state]"
                       lineageId="Package\Load Publishers\Get Publishers.Outputs[OLE DB Source Output].Columns[state]" />
                     <inputColumn
-                      refId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input].Columns[PublisherSK]"
+                      refId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input].Columns[PublisherSK]"
                       cachedDataType="i4"
                       cachedName="PublisherSK"
-                      externalMetadataColumnId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input].ExternalColumns[PublisherSK]"
+                      externalMetadataColumnId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input].ExternalColumns[PublisherSK]"
                       lineageId="Package\Load Publishers\Lookup.Outputs[Lookup Match Output].Columns[PublisherSK]" />
                     <inputColumn
-                      refId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input].Columns[pub_name]"
+                      refId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input].Columns[pub_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="40"
                       cachedName="pub_name"
-                      externalMetadataColumnId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input].ExternalColumns[pub_name]"
+                      externalMetadataColumnId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input].ExternalColumns[pub_name]"
                       lineageId="Package\Load Publishers\Get Publishers.Outputs[OLE DB Source Output].Columns[pub_name]" />
                     <inputColumn
-                      refId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input].Columns[country]"
+                      refId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input].Columns[country]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="country"
-                      externalMetadataColumnId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      externalMetadataColumnId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input].ExternalColumns[country]"
                       lineageId="Package\Load Publishers\Get Publishers.Outputs[OLE DB Source Output].Columns[country]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      refId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input].ExternalColumns[city]"
                       codePage="1252"
                       dataType="str"
                       length="20"
                       name="city" />
                     <externalMetadataColumn
-                      refId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      refId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input].ExternalColumns[state]"
                       codePage="1252"
                       dataType="str"
                       length="2"
                       name="state" />
                     <externalMetadataColumn
-                      refId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input].ExternalColumns[PublisherSK]"
+                      refId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input].ExternalColumns[PublisherSK]"
                       dataType="i4"
                       name="PublisherSK" />
                     <externalMetadataColumn
-                      refId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input].ExternalColumns[pub_name]"
+                      refId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input].ExternalColumns[pub_name]"
                       codePage="1252"
                       dataType="str"
                       length="40"
                       name="pub_name" />
                     <externalMetadataColumn
-                      refId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      refId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input].ExternalColumns[country]"
                       codePage="1252"
                       dataType="str"
                       length="30"
@@ -824,22 +824,22 @@ where [refTable].[pub_id] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load Publishers\Update Existing Store.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Load Publishers\Update Existing Publisher.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Publishers\Update Existing Store.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Load Publishers\Update Existing Publisher.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load Publishers\Update Existing Store.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load Publishers\Update Existing Publisher.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load Publishers\Update Existing Store.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load Publishers\Update Existing Publisher.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load Publishers\Update Existing Store.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load Publishers\Update Existing Publisher.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -851,12 +851,12 @@ where [refTable].[pub_id] = ?</property>
           <paths>
             <path
               refId="Package\Load Publishers.Paths[Lookup Match Output]"
-              endId="Package\Load Publishers\Update Existing Store.Inputs[OLE DB Destination Input]"
+              endId="Package\Load Publishers\Update Existing Publisher.Inputs[OLE DB Destination Input]"
               name="Lookup Match Output"
               startId="Package\Load Publishers\Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load Publishers.Paths[Lookup No Match Output]"
-              endId="Package\Load Publishers\Load New Store.Inputs[OLE DB Destination Input]"
+              endId="Package\Load Publishers\Load New Publisher.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\Load Publishers\Lookup.Outputs[Lookup No Match Output]" />
             <path
@@ -1121,16 +1121,16 @@ where [refTable].[pub_id] = ?</property>
           Id="Package\Load Publishers\Lookup"
           TopLeft="283,179" />
         <NodeLayout
-          Size="158,42"
-          Id="Package\Load Publishers\Load New Store"
+          Size="177,42"
+          Id="Package\Load Publishers\Load New Publisher"
           TopLeft="416,305" />
         <NodeLayout
           Size="151,42"
           Id="Package\Load Publishers\Get Publishers"
           TopLeft="268,69" />
         <NodeLayout
-          Size="185,42"
-          Id="Package\Load Publishers\Update Existing Store"
+          Size="205,42"
+          Id="Package\Load Publishers\Update Existing Publisher"
           TopLeft="137,309" />
         <EdgeLayout
           Id="Package\Load Publishers.Paths[OLE DB Source Output]"
@@ -1160,9 +1160,9 @@ where [refTable].[pub_id] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="136.666666666667,84"
+              EndConnector="146.166666666667,84"
               Start="0,0"
-              End="136.666666666667,76.5">
+              End="146.166666666667,76.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1173,56 +1173,56 @@ where [refTable].[pub_id] = ?</property>
                     Point2="0,34.2915951972556"
                     Point3="4,34.2915951972556" />
                   <mssgle:LineSegment
-                    End="132.666666666667,34.2915951972556" />
+                    End="142.166666666667,34.2915951972556" />
                   <mssgle:CubicBezierSegment
-                    Point1="132.666666666667,34.2915951972556"
-                    Point2="136.666666666667,34.2915951972556"
-                    Point3="136.666666666667,38.2915951972556" />
+                    Point1="142.166666666667,34.2915951972556"
+                    Point2="146.166666666667,34.2915951972556"
+                    Point3="146.166666666667,38.2915951972556" />
                   <mssgle:LineSegment
-                    End="136.666666666667,76.5" />
+                    End="146.166666666667,76.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="12.5269466145833,39.2915951972556,111.6127734375,11.609375"
+              BoundingBox="17.2769466145833,39.2915951972556,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load Publishers.Paths[Lookup Match Output]"
-          TopLeft="340.5,221">
+          TopLeft="322.666666666667,221">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-111,88"
+              EndConnector="-83.1666666666667,88"
               Start="0,0"
-              End="-111,80.5">
+              End="-83.1666666666667,80.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40" />
+                    End="0,31.9245283018868" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,40"
-                    Point2="0,44"
-                    Point3="-4,44" />
+                    Point1="0,31.9245283018868"
+                    Point2="0,35.9245283018868"
+                    Point3="-4,35.9245283018868" />
                   <mssgle:LineSegment
-                    End="-107,44" />
+                    End="-79.1666666666667,35.9245283018868" />
                   <mssgle:CubicBezierSegment
-                    Point1="-107,44"
-                    Point2="-111,44"
-                    Point3="-111,48" />
+                    Point1="-79.1666666666667,35.9245283018868"
+                    Point2="-83.1666666666667,35.9245283018868"
+                    Point3="-83.1666666666667,39.9245283018868" />
                   <mssgle:LineSegment
-                    End="-111,80.5" />
+                    End="-83.1666666666667,80.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-103.69138671875,49,96.3827734375,11.609375"
+              BoundingBox="-89.7747200520834,40.9245283018868,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1253,7 +1253,7 @@ where [refTable].[pub_id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Publishers\Load New Store">
+    design-time-name="Package\Load Publishers\Load New Publisher">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1274,7 +1274,7 @@ where [refTable].[pub_id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Publishers\Update Existing Store">
+    design-time-name="Package\Load Publishers\Update Existing Publisher">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
