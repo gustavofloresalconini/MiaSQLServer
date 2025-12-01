@@ -75,6 +75,16 @@
     <Build Include="Schema\Tables\dbo\PackageConfig.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\GetLastPackageRowVersion.sql" />
     <Build Include="Schema\Tables\dbo\staging.store.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimStore.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\UpdateLastPackageRowVersion.sql" />
+    <Build Include="Schema\Tables\dbo\staging.sale.sql" />
+    <Build Include="Schema\Tables\dbo\staging.publisher.sql" />
+    <Build Include="Schema\Tables\dbo\staging.title.sql" />
+    <Build Include="Schema\Tables\dbo\staging.author.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimTitle.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimAuthor.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimPublisher.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeFactSale.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\DimDate.data.sql" />

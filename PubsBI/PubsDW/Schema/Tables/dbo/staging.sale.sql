@@ -1,0 +1,19 @@
+CREATE TABLE [dbo].[staging.sale](
+	[SaleID] [int] NOT NULL,
+	--
+	[DateKey] [int] NOT NULL,
+	[StoreSK] [int] NULL,
+	[PublisherSK] [int] NULL,
+	[AuthorSK] [int] NULL,
+	[TitleSK] [int] NULL,
+	--
+	[Quantity] [int] NULL,
+	[UnitPrice] [money] NULL,
+	[TotalAmount] [money] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[SaleID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
