@@ -62,6 +62,7 @@
     <Folder Include="Schema\Programmability" />
     <Folder Include="Schema\Tables\dbo" />
     <Folder Include="Scripts" />
+    <Folder Include="Schema\Programmability\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schema\Tables\dbo\authors.Table.sql" />
@@ -75,6 +76,12 @@
     <Build Include="Schema\Tables\dbo\stores.Table.sql" />
     <Build Include="Schema\Tables\dbo\titleauthor.Table.sql" />
     <Build Include="Schema\Tables\dbo\titles.Table.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\GetAuthorsChangeByRowVersion.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\GetDatabaseRowVersion.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\GetPublishersChangeByRowVersion.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\GetSalesChangeByRowVersion.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\GetStoresChangeByRowVersion.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\GetTitlesChangeByRowVersion.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\dbo.authors.Data.sql" />
