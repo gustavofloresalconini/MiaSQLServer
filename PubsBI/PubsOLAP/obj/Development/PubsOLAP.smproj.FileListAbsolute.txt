@@ -1,0 +1,8 @@
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsOLAP\bin\Model.asdatabase
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsOLAP\bin\Model.deploymenttargets
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsOLAP\bin\Model.deploymentoptions
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsOLAP\obj\Development\PubsOLAP.smproj.AssemblyReference.cache
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsOLAP\obj\Development\PubsOLAP.smproj.CoreCompileInputs.cache
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsOLAP\obj\Development\Model.asdatabase
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsOLAP\obj\Development\Model.deploymentoptions
+C:\Users\gaflores\Documents\_per\academicos\uagrm\MIA-1v4e\04. data management & BI\projects\MiaSQLServer\PubsBI\PubsOLAP\obj\Development\Model.deploymenttargets

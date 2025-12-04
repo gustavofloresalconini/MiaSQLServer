@@ -11,8 +11,8 @@
   DTS:LocaleID="16394"
   DTS:ObjectName="DimAuthor"
   DTS:PackageType="5"
-  DTS:VersionBuild="43"
-  DTS:VersionGUID="{9AC10749-D309-4FE3-BE3A-099CD6695DDE}">
+  DTS:VersionBuild="44"
+  DTS:VersionGUID="{1FC95991-D932-4808-A43D-9AECD0F4F3E7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1209,6 +1209,10 @@ where [refTable].[au_id] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="191,42"
+          Id="Package\Load Authors\Update Existing Author"
+          TopLeft="137,308" />
+        <NodeLayout
           Size="164,42"
           Id="Package\Load Authors\Load New Author"
           TopLeft="416,305" />
@@ -1216,10 +1220,6 @@ where [refTable].[au_id] = ?</property>
           Size="138,42"
           Id="Package\Load Authors\Get Authors"
           TopLeft="268,69" />
-        <NodeLayout
-          Size="191,42"
-          Id="Package\Load Authors\Update Existing Author"
-          TopLeft="137,309" />
         <NodeLayout
           Size="115,42"
           Id="Package\Load Authors\Lookup"
@@ -1244,42 +1244,6 @@ where [refTable].[au_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load Authors.Paths[Lookup Match Output]"
-          TopLeft="316.666666666667,217">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-84.1666666666667,92"
-              Start="0,0"
-              End="-84.1666666666667,84.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.557461406518" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,33.557461406518"
-                    Point2="0,37.557461406518"
-                    Point3="-4,37.557461406518" />
-                  <mssgle:LineSegment
-                    End="-80.1666666666667,37.557461406518" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-80.1666666666667,37.557461406518"
-                    Point2="-84.1666666666667,37.557461406518"
-                    Point3="-84.1666666666667,41.557461406518" />
-                  <mssgle:LineSegment
-                    End="-84.1666666666667,84.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-90.2747200520834,42.557461406518,96.3827734375,11.609375"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1318,9 +1282,58 @@ where [refTable].[au_id] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Authors.Paths[Lookup Match Output]"
+          TopLeft="316.666666666667,217">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-84.1666666666667,91"
+              Start="0,0"
+              End="-84.1666666666667,83.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.1492281303602" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.1492281303602"
+                    Point2="0,37.1492281303602"
+                    Point3="-4,37.1492281303602" />
+                  <mssgle:LineSegment
+                    End="-80.1666666666667,37.1492281303602" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-80.1666666666667,37.1492281303602"
+                    Point2="-84.1666666666667,37.1492281303602"
+                    Point3="-84.1666666666667,41.1492281303602" />
+                  <mssgle:LineSegment
+                    End="-84.1666666666667,83.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-90.2747200520834,42.1492281303602,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Authors\Update Existing Author">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load Authors\Load New Author">
     <Properties>
@@ -1343,25 +1356,12 @@ where [refTable].[au_id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Authors\Update Existing Author">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Load Authors\Lookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1371,7 +1371,7 @@ where [refTable].[au_id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

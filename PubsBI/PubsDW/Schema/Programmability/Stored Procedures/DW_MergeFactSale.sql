@@ -11,6 +11,6 @@ BEGIN
 	   ,[UnitPrice]   = sc.[UnitPrice]
 	   ,[TotalAmount]   = sc.[TotalAmount]
 	FROM [dbo].[FactSales]        dc
-	INNER JOIN [dbo].[staging.sale] sc ON (dc.[SaleSK]=sc.[SaleID])
+	INNER JOIN [dbo].[staging.sale] sc ON (dc.[SaleID] = sc.[SaleID])
 END
 GO

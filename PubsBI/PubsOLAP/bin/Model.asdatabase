@@ -1,0 +1,629 @@
+{
+  "name": "PubsOLAP",
+  "compatibilityLevel": 1200,
+  "model": {
+    "name": "Modelo",
+    "culture": "es-BO",
+    "dataSources": [
+      {
+        "name": "lpz-p-252456 ",
+        "connectionString": "Provider=SQLOLEDB;Data Source=lpz-p-252456;Persist Security Info=false;User ID=sa;Integrated Security=SSPI;Initial Catalog=PubsDW",
+        "impersonationMode": "impersonateAccount",
+        "account": "YPFB\\gaflores",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "Authors",
+        "columns": [
+          {
+            "name": "AuthorSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "AuthorSK",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "au_id",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "au_id",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "authorLastName",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "au_lname",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "authorFirstName",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "au_fname",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "phone",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "phone",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "city",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "city",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "state",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "state",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "zip",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "zip",
+            "sourceProviderType": "Char"
+          },
+          {
+            "type": "calculated",
+            "name": "authorName",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "CONCATENATE(CONCATENATE(Authors[authorFirstName], \" \"),Authors[authorLastName])"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimAuthors",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[DimAuthors].*   FROM [dbo].[DimAuthors] ",
+              "dataSource": "lpz-p-252456 "
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[DimAuthors].*   FROM [dbo].[DimAuthors] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimAuthors"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Date",
+        "columns": [
+          {
+            "name": "DateKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DateKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FullDate",
+            "dataType": "string",
+            "sourceColumn": "FullDate",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "DayNumberOfWeek",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DayNumberOfWeek",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "DayNameOfWeek",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "DayNameOfWeek",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "DayNumberOfMonth",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DayNumberOfMonth",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "DayNumberOfYear",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DayNumberOfYear",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "WeekNumberOfYear",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "WeekNumberOfYear",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "MonthName",
+            "dataType": "string",
+            "sourceColumn": "MonthName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "MonthNumberOfYear",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "MonthNumberOfYear",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "CalendarQuarter",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "CalendarQuarter",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "CalendarYear",
+            "dataType": "int64",
+            "sourceColumn": "CalendarYear",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "CalendarSemester",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "CalendarSemester",
+            "sourceProviderType": "UnsignedTinyInt"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimDate",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[DimDate].*   FROM [dbo].[DimDate] ",
+              "dataSource": "lpz-p-252456 "
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[DimDate].*   FROM [dbo].[DimDate] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimDate"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Publishers",
+        "columns": [
+          {
+            "name": "PublisherSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "PublisherSK",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "pub_id",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "pub_id",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "publisherName",
+            "dataType": "string",
+            "sourceColumn": "pub_name",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "city",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "city",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "state",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "state",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "country",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "country",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimPublishers",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[DimPublishers].*   FROM [dbo].[DimPublishers] ",
+              "dataSource": "lpz-p-252456 "
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[DimPublishers].*   FROM [dbo].[DimPublishers] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimPublishers"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Stores",
+        "columns": [
+          {
+            "name": "StoreSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "StoreSK",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "stor_id",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "stor_id",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "storeName",
+            "dataType": "string",
+            "sourceColumn": "stor_name",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "city",
+            "dataType": "string",
+            "sourceColumn": "city",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "state",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "state",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "zip",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "zip",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimStores",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[DimStores].*   FROM [dbo].[DimStores] ",
+              "dataSource": "lpz-p-252456 "
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[DimStores].*   FROM [dbo].[DimStores] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimStores"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Titles",
+        "columns": [
+          {
+            "name": "TitleSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "TitleSK",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "title_id",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "title_id",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "title",
+            "dataType": "string",
+            "sourceColumn": "title",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "type",
+            "dataType": "string",
+            "sourceColumn": "type",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "price",
+            "dataType": "decimal",
+            "isHidden": true,
+            "sourceColumn": "price",
+            "formatString": "\"Bs\"#,0.00;-\"Bs\"#,0.00;\"Bs\"#,0.00",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"16394\" DisplayName=\"Bs Español (Bolivia)\" Symbol=\"Bs\" PositivePattern=\"0\" NegativePattern=\"1\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "pubdate",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "pubdate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimTitles",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[DimTitles].*   FROM [dbo].[DimTitles] ",
+              "dataSource": "lpz-p-252456 "
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[DimTitles].*   FROM [dbo].[DimTitles] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimTitles"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Sales",
+        "columns": [
+          {
+            "name": "SaleID",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "SaleID",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "TitleSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "TitleSK",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "AuthorSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "AuthorSK",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "PublisherSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "PublisherSK",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "StoreSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "StoreSK",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "DateKey",
+            "dataType": "int64",
+            "sourceColumn": "DateKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Quantity",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "UnitPrice",
+            "dataType": "decimal",
+            "sourceColumn": "UnitPrice",
+            "formatString": "\"Bs\"#,0.00;-\"Bs\"#,0.00;\"Bs\"#,0.00",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"16394\" DisplayName=\"Bs Español (Bolivia)\" Symbol=\"Bs\" PositivePattern=\"0\" NegativePattern=\"1\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "TotalAmount",
+            "dataType": "decimal",
+            "sourceColumn": "TotalAmount",
+            "formatString": "\"Bs\"#,0.00;-\"Bs\"#,0.00;\"Bs\"#,0.00",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"16394\" DisplayName=\"Bs Español (Bolivia)\" Symbol=\"Bs\" PositivePattern=\"0\" NegativePattern=\"1\" /></Format>"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "SaleType",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF(Sales[Quantity] > 20, \"Big Sale\", \"Simple Sale\")"
+          },
+          {
+            "type": "calculated",
+            "name": "AmountType",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF(Sales[TotalAmount]>317, \"Big Amount\", \"Simple Amount\")"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactSales",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[FactSales].*   FROM [dbo].[FactSales] ",
+              "dataSource": "lpz-p-252456 "
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "TotalQuantity",
+            "expression": " SUM(Sales[Quantity])"
+          },
+          {
+            "name": "QuantitySales",
+            "expression": " COUNT(Sales[SaleID])"
+          },
+          {
+            "name": "TotalSales",
+            "expression": " SUM(Sales[TotalAmount])"
+          },
+          {
+            "name": "AverageAmount",
+            "expression": " AVERAGE(Sales[TotalAmount])"
+          },
+          {
+            "name": "AverageQuantity",
+            "expression": " AVERAGE(Sales[Quantity])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[FactSales].*   FROM [dbo].[FactSales] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "FactSales"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "9b5ab2eb-070c-41fa-95fd-c6b245034fc2",
+        "fromTable": "Sales",
+        "fromColumn": "AuthorSK",
+        "toTable": "Authors",
+        "toColumn": "AuthorSK"
+      },
+      {
+        "name": "4e58f6ed-5c08-4a75-8f87-6cf66a8fb9c1",
+        "fromTable": "Sales",
+        "fromColumn": "DateKey",
+        "toTable": "Date",
+        "toColumn": "DateKey"
+      },
+      {
+        "name": "71edd5ff-f871-4368-baca-a9eed53f1788",
+        "fromTable": "Sales",
+        "fromColumn": "PublisherSK",
+        "toTable": "Publishers",
+        "toColumn": "PublisherSK"
+      },
+      {
+        "name": "adafd6b0-f0b1-46e9-9c76-ad007fe96aa7",
+        "fromTable": "Sales",
+        "fromColumn": "StoreSK",
+        "toTable": "Stores",
+        "toColumn": "StoreSK"
+      },
+      {
+        "name": "47e48c9d-412d-40c3-b5c3-18dde0355c3d",
+        "fromTable": "Sales",
+        "fromColumn": "TitleSK",
+        "toTable": "Titles",
+        "toColumn": "TitleSK"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  }
+}

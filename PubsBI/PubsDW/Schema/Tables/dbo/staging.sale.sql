@@ -1,5 +1,5 @@
 CREATE TABLE [dbo].[staging.sale](
-	[SaleID] [int] NOT NULL,
+	[SaleID] [varchar](40) NOT NULL,
 	--
 	[DateKey] [int] NOT NULL,
 	[StoreSK] [int] NULL,

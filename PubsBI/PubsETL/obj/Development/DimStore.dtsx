@@ -11,8 +11,8 @@
   DTS:LocaleID="16394"
   DTS:ObjectName="DimStore"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{7DFD7580-4B7D-480C-8D4A-2C3F6778B510}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{217AC613-8A2E-4C02-BFF1-419DD6CA12AF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1131,9 +1131,9 @@ where [refTable].[stor_id] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="185,42"
+          Size="180,42"
           Id="Package\Load Stores\Update Existing Store"
-          TopLeft="137,309" />
+          TopLeft="136,306" />
         <NodeLayout
           Size="115,42"
           Id="Package\Load Stores\Lookup"
@@ -1188,33 +1188,33 @@ where [refTable].[stor_id] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-85.1666666666667,94"
+              EndConnector="-88.6666666666667,91"
               Start="0,0"
-              End="-85.1666666666667,86.5">
+              End="-88.6666666666667,83.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.3739279588336" />
+                    End="0,33.1492281303602" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,34.3739279588336"
-                    Point2="0,38.3739279588336"
-                    Point3="-4,38.3739279588336" />
+                    Point1="0,33.1492281303602"
+                    Point2="0,37.1492281303602"
+                    Point3="-4,37.1492281303602" />
                   <mssgle:LineSegment
-                    End="-81.1666666666667,38.3739279588336" />
+                    End="-84.6666666666667,37.1492281303602" />
                   <mssgle:CubicBezierSegment
-                    Point1="-81.1666666666667,38.3739279588336"
-                    Point2="-85.1666666666667,38.3739279588336"
-                    Point3="-85.1666666666667,42.3739279588336" />
+                    Point1="-84.6666666666667,37.1492281303602"
+                    Point2="-88.6666666666667,37.1492281303602"
+                    Point3="-88.6666666666667,41.1492281303602" />
                   <mssgle:LineSegment
-                    End="-85.1666666666667,86.5" />
+                    End="-88.6666666666667,83.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-90.7747200520834,43.3739279588336,96.3827734375,11.609375"
+              BoundingBox="-92.5247200520834,42.1492281303602,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1262,7 +1262,7 @@ where [refTable].[stor_id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1272,7 +1272,7 @@ where [refTable].[stor_id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

@@ -11,8 +11,8 @@
   DTS:LocaleID="16394"
   DTS:ObjectName="DimTitle"
   DTS:PackageType="5"
-  DTS:VersionBuild="49"
-  DTS:VersionGUID="{D49DFB4A-A90F-4135-B804-1C858F307F0C}">
+  DTS:VersionBuild="62"
+  DTS:VersionGUID="{27182194-BF34-4554-938A-20F23C159368}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -692,7 +692,7 @@ where [refTable].[title_id] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[DimTitles]</property>
+                  name="OpenRowset">[dbo].[staging.title]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -718,7 +718,7 @@ where [refTable].[title_id] = ?</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
+                  name="FastLoadKeepIdentity">true</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
@@ -748,14 +748,6 @@ where [refTable].[title_id] = ?</property>
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\Load Titles\Update Existing Title.Inputs[OLE DB Destination Input].Columns[title_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="6"
-                      cachedName="title_id"
-                      externalMetadataColumnId="Package\Load Titles\Update Existing Title.Inputs[OLE DB Destination Input].ExternalColumns[title_id]"
-                      lineageId="Package\Load Titles\Get Titles.Outputs[OLE DB Source Output].Columns[title_id]" />
                     <inputColumn
                       refId="Package\Load Titles\Update Existing Title.Inputs[OLE DB Destination Input].Columns[title]"
                       cachedCodepage="1252"
@@ -797,12 +789,6 @@ where [refTable].[title_id] = ?</property>
                       refId="Package\Load Titles\Update Existing Title.Inputs[OLE DB Destination Input].ExternalColumns[TitleSK]"
                       dataType="i4"
                       name="TitleSK" />
-                    <externalMetadataColumn
-                      refId="Package\Load Titles\Update Existing Title.Inputs[OLE DB Destination Input].ExternalColumns[title_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="6"
-                      name="title_id" />
                     <externalMetadataColumn
                       refId="Package\Load Titles\Update Existing Title.Inputs[OLE DB Destination Input].ExternalColumns[title]"
                       codePage="1252"
@@ -885,7 +871,7 @@ where [refTable].[title_id] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{14344939-AF32-4B9E-8CA2-FDC8BA0251B0}"
-          SQLTask:SqlStatementSource="EXECUTE [dbo].[DW_MergeDimAuthor]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="EXECUTE [dbo].[DW_MergeDimTitle]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -901,7 +887,7 @@ where [refTable].[title_id] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{14344939-AF32-4B9E-8CA2-FDC8BA0251B0}"
-          SQLTask:SqlStatementSource="EXECUTE [dbo].[UpdateLastPackageRowVersion] @tableName = 'Authors', @lastRowVersion = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          SQLTask:SqlStatementSource="EXECUTE [dbo].[UpdateLastPackageRowVersion] @tableName = 'Titles', @lastRowVersion = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="0"
             SQLTask:DtsVariableName="User::dbts"
@@ -985,7 +971,7 @@ where [refTable].[title_id] = ?</property>
         <NodeLayout
           Size="144,42"
           Id="Package\Sync Staging"
-          TopLeft="221,324" />
+          TopLeft="220,323" />
         <NodeLayout
           Size="149,42"
           Id="Package\Update Config"
@@ -1058,18 +1044,18 @@ where [refTable].[title_id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 3]"
-          TopLeft="291,293">
+          TopLeft="290.5,293">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,31"
+              EndConnector="0,30"
               Start="0,0"
-              End="0,23.5">
+              End="0,22.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.5" />
+                    End="0,22.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1080,18 +1066,18 @@ where [refTable].[title_id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 4]"
-          TopLeft="289.25,366">
+          TopLeft="288.75,365">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48"
+              EndConnector="0,49"
               Start="0,0"
-              End="0,40.5">
+              End="0,41.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.5" />
+                    End="0,41.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1109,52 +1095,30 @@ where [refTable].[title_id] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="113,42"
+          Id="Package\Load Titles\Lookup"
+          TopLeft="273,169" />
+        <NodeLayout
           Size="176,42"
           Id="Package\Load Titles\Update Existing Title"
-          TopLeft="137,309" />
-        <NodeLayout
-          Size="149,42"
-          Id="Package\Load Titles\Load New Title"
-          TopLeft="416,305" />
+          TopLeft="163,303" />
         <NodeLayout
           Size="124,42"
           Id="Package\Load Titles\Get Titles"
           TopLeft="268,69" />
         <NodeLayout
-          Size="113,42"
-          Id="Package\Load Titles\Lookup"
-          TopLeft="274,174" />
+          Size="149,42"
+          Id="Package\Load Titles\Load New Title"
+          TopLeft="415,304" />
         <EdgeLayout
-          Id="Package\Load Titles.Paths[OLE DB Source Output]"
-          TopLeft="330.25,111">
+          Id="Package\Load Titles.Paths[Lookup No Match Output]"
+          TopLeft="347,211">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,63"
+              EndConnector="142.5,93"
               Start="0,0"
-              End="0,55.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load Titles.Paths[Lookup Match Output]"
-          TopLeft="313,216">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-88,93"
-              Start="0,0"
-              End="-88,85.5">
+              End="142.5,85.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1163,79 +1127,111 @@ where [refTable].[title_id] = ?</property>
                   <mssgle:CubicBezierSegment
                     Point1="0,33.979057591623"
                     Point2="0,37.979057591623"
-                    Point3="-4,37.979057591623" />
+                    Point3="4,37.979057591623" />
                   <mssgle:LineSegment
-                    End="-84,37.979057591623" />
+                    End="138.5,37.979057591623" />
                   <mssgle:CubicBezierSegment
-                    Point1="-84,37.979057591623"
-                    Point2="-88,37.979057591623"
-                    Point3="-88,41.979057591623" />
+                    Point1="138.5,37.979057591623"
+                    Point2="142.5,37.979057591623"
+                    Point3="142.5,41.979057591623" />
                   <mssgle:LineSegment
-                    End="-88,85.5" />
+                    End="142.5,85.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-92.19138671875,42.979057591623,96.3827734375,11.609375"
+              BoundingBox="15.44361328125,42.979057591623,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load Titles.Paths[Lookup No Match Output]"
-          TopLeft="348,216">
+          Id="Package\Load Titles.Paths[Lookup Match Output]"
+          TopLeft="312,211">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="142.5,89"
+              EndConnector="-61,92"
               Start="0,0"
-              End="142.5,81.5">
+              End="-61,84.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.3455497382199" />
+                    End="0,33.5706806282722" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,32.3455497382199"
-                    Point2="0,36.3455497382199"
-                    Point3="4,36.3455497382199" />
+                    Point1="0,33.5706806282722"
+                    Point2="0,37.5706806282722"
+                    Point3="-4,37.5706806282722" />
                   <mssgle:LineSegment
-                    End="138.5,36.3455497382199" />
+                    End="-57,37.5706806282722" />
                   <mssgle:CubicBezierSegment
-                    Point1="138.5,36.3455497382199"
-                    Point2="142.5,36.3455497382199"
-                    Point3="142.5,40.3455497382199" />
+                    Point1="-57,37.5706806282722"
+                    Point2="-61,37.5706806282722"
+                    Point3="-61,41.5706806282722" />
                   <mssgle:LineSegment
-                    End="142.5,81.5" />
+                    End="-61,84.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="15.44361328125,41.3455497382199,111.6127734375,11.609375"
+              BoundingBox="-78.69138671875,42.5706806282722,96.3827734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Titles.Paths[OLE DB Source Output]"
+          TopLeft="329.75,111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Titles\Update Existing Title">
+    design-time-name="Package\Load Titles\Lookup">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimTitles]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">Table</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Titles\Load New Title">
+    design-time-name="Package\Load Titles\Update Existing Title">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1256,25 +1252,15 @@ where [refTable].[title_id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Titles\Lookup">
+    design-time-name="Package\Load Titles\Load New Title">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimTitles]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
